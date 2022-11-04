@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>YTDownloader</class>
+ <widget class="QMainWindow" name="YTDownloader">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1005</width>
-    <height>813</height>
+    <width>997</width>
+    <height>566</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">Qframe#frame{
+background-color: black;}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
@@ -27,7 +31,7 @@
      <string notr="true">QWidget#widget{
 background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));}</string>
     </property>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="title">
      <property name="geometry">
       <rect>
        <x>250</x>
@@ -57,7 +61,7 @@ color: white;</string>
       <string notr="true">QWidget#widget_2{
 background-color: rgb(207, 0, 0);}</string>
      </property>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="inputlink">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -117,7 +121,7 @@ font: 14pt &quot;Reem Kufi&quot;;</string>
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="enterbutton">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -238,9 +242,24 @@ font: 14pt &quot;Reem Kufi&quot;;</string>
       <string>1. Input link into textbox.</string>
      </property>
     </widget>
+    <widget class="QFrame" name="frame">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>539</y>
+       <width>1001</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

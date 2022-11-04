@@ -1,7 +1,7 @@
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from mainwindow import Ui_MainWindow
+from mainwindow import Ui_YTDownloader
 from pytube import YouTube
 import os.path
 import shutil
@@ -9,14 +9,14 @@ import time
 
 save_path = '/Downloads/'
 
-class MainWindow(QMainWindow, Ui_MainWindow):
+class MainWindow(QMainWindow, Ui_YTDownloader):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        self.pushButton.clicked.connect(lambda: self.begin_search())
+        self.enterbutton.clicked.connect(lambda: self.begin_search())
 
     def begin_search(self):
-        link = self.lineEdit.text()
+        link = self.inputlink.text()
         print('good')
         yt = YouTube(link)
 

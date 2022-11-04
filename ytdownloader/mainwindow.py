@@ -11,30 +11,32 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1005, 813)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_YTDownloader(object):
+    def setupUi(self, YTDownloader):
+        YTDownloader.setObjectName("YTDownloader")
+        YTDownloader.resize(997, 566)
+        YTDownloader.setStyleSheet("Qframe#frame{\n"
+"background-color: black;}")
+        self.centralwidget = QtWidgets.QWidget(YTDownloader)
         self.centralwidget.setObjectName("centralwidget")
         self.widget = QtWidgets.QWidget(self.centralwidget)
         self.widget.setGeometry(QtCore.QRect(0, 0, 1000, 800))
         self.widget.setStyleSheet("QWidget#widget{\n"
 "background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(255, 255, 255, 255));}")
         self.widget.setObjectName("widget")
-        self.label = QtWidgets.QLabel(self.widget)
-        self.label.setGeometry(QtCore.QRect(250, 40, 711, 121))
-        self.label.setStyleSheet("font: 24pt \"Reem Kufi\";\n"
+        self.title = QtWidgets.QLabel(self.widget)
+        self.title.setGeometry(QtCore.QRect(250, 40, 711, 121))
+        self.title.setStyleSheet("font: 24pt \"Reem Kufi\";\n"
 "color: white;")
-        self.label.setObjectName("label")
+        self.title.setObjectName("title")
         self.widget_2 = QtWidgets.QWidget(self.widget)
         self.widget_2.setGeometry(QtCore.QRect(260, 250, 481, 231))
         self.widget_2.setStyleSheet("QWidget#widget_2{\n"
 "background-color: rgb(207, 0, 0);}")
         self.widget_2.setObjectName("widget_2")
-        self.lineEdit = QtWidgets.QLineEdit(self.widget_2)
-        self.lineEdit.setGeometry(QtCore.QRect(40, 70, 391, 20))
-        self.lineEdit.setObjectName("lineEdit")
+        self.inputlink = QtWidgets.QLineEdit(self.widget_2)
+        self.inputlink.setGeometry(QtCore.QRect(40, 70, 391, 20))
+        self.inputlink.setObjectName("inputlink")
         self.widget_3 = QtWidgets.QWidget(self.widget_2)
         self.widget_3.setEnabled(True)
         self.widget_3.setGeometry(QtCore.QRect(40, 120, 401, 80))
@@ -50,12 +52,12 @@ class Ui_MainWindow(object):
         self.label_9.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Reem Kufi\";")
         self.label_9.setObjectName("label_9")
-        self.pushButton = QtWidgets.QPushButton(self.widget_2)
-        self.pushButton.setGeometry(QtCore.QRect(190, 100, 75, 23))
-        self.pushButton.setStyleSheet("font: 8pt \"Reem Kufi\";\n"
+        self.enterbutton = QtWidgets.QPushButton(self.widget_2)
+        self.enterbutton.setGeometry(QtCore.QRect(190, 100, 75, 23))
+        self.enterbutton.setStyleSheet("font: 8pt \"Reem Kufi\";\n"
 "background-color: rgb(148, 0, 0);\n"
 "color: white;")
-        self.pushButton.setObjectName("pushButton")
+        self.enterbutton.setObjectName("enterbutton")
         self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setGeometry(QtCore.QRect(30, 250, 171, 21))
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
@@ -86,24 +88,36 @@ class Ui_MainWindow(object):
         self.label_3.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Reem Kufi\";")
         self.label_3.setObjectName("label_3")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.frame = QtWidgets.QFrame(self.widget)
+        self.frame.setGeometry(QtCore.QRect(0, 539, 1001, 31))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        YTDownloader.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(YTDownloader)
+        QtCore.QMetaObject.connectSlotsByName(YTDownloader)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, YTDownloader):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "Youtube Downloader by MonCcciii"))
-        self.label_8.setText(_translate("MainWindow", ""))
-        self.label_9.setText(_translate("MainWindow", ""))
-        self.pushButton.setText(_translate("MainWindow", "Enter :)"))
-        self.label_2.setText(_translate("MainWindow", "How To Use?"))
-        self.label_4.setText(_translate("MainWindow", "2. Press Enter"))
-        self.label_6.setText(_translate("MainWindow", "into the Downloads folder of the folder"))
-        self.label_7.setText(_translate("MainWindow", "this file is in."))
-        self.label_5.setText(_translate("MainWindow", "3. Enjoy! Video should be downloaded"))
-        self.label_3.setText(_translate("MainWindow", "1. Input link into textbox."))
+        YTDownloader.setWindowTitle(_translate("YTDownloader", "MainWindow"))
+        self.title.setText(_translate("YTDownloader", "Youtube Downloader by MonCcciii"))
+        self.label_8.setText(_translate("YTDownloader", ""))
+        self.label_9.setText(_translate("YTDownloader", ""))
+        self.enterbutton.setText(_translate("YTDownloader", "Enter :)"))
+        self.label_2.setText(_translate("YTDownloader", "How To Use?"))
+        self.label_4.setText(_translate("YTDownloader", "2. Press Enter"))
+        self.label_6.setText(_translate("YTDownloader", "into the Downloads folder of the folder"))
+        self.label_7.setText(_translate("YTDownloader", "this file is in."))
+        self.label_5.setText(_translate("YTDownloader", "3. Enjoy! Video should be downloaded"))
+        self.label_3.setText(_translate("YTDownloader", "1. Input link into textbox."))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    YTDownloader = QtWidgets.QMainWindow()
+    ui = Ui_YTDownloader()
+    ui.setupUi(YTDownloader)
+    YTDownloader.show()
+    sys.exit(app.exec_())
